@@ -32,7 +32,7 @@ Your stack familiarity (JS/TS) maps directly onto `web/`; the Python API is deli
 - **One weekend**: [00-fast-track.md](00-fast-track.md) only.
 - **Two weeks**: fast track → [01-.../05-key-flows.md](01-codebase-cartography/05-key-flows.md) → [03-.../05-pattern-catalog.md](03-architecture-and-patterns/05-pattern-catalog.md) → one ticket from [06-.../01-good-first-tickets.md](06-contribution-practice/01-good-first-tickets.md) → skim `08-interview-prep/`.
 - **Eight weeks**: one track per week in numbered order, doing every drill; ship 2–3 tickets and one mid-level feature.
-- **Ongoing contributor**: live in `06-contribution-practice/` and `07-career-and-collaboration/`, return to `03-…/06-architecture-critique.md` monthly.
+- **Ongoing contributor**: live in `06-contribution-practice/` and `07-career-and-collaboration/`, return to [03-…/06-architecture-critique.md](03-architecture-and-patterns/06-architecture-critique.md) monthly.
 - **Interview in two weeks**: go straight to [08-interview-prep/07-two-week-cram-plan.md](08-interview-prep/07-two-week-cram-plan.md).
 
 ### Recommended paths by profile

@@ -70,7 +70,7 @@ Run `pnpm -C web test web/app/components/develop/__tests__/tag.spec.tsx`.
 
 **Files You'll Likely Touch:**
 - `web/app/components/datasets/list/datasets.tsx` - render empty state.
-- `web/i18n/en-US/dataset.ts` or related dataset locale file - copy.
+- `web/i18n/en-US/dataset.json` or related dataset locale file - copy.
 
 **Relevant Existing Patterns:**
 - `web/app/components/datasets/list/datasets.tsx:26-68`
@@ -120,7 +120,7 @@ Add/update a component test for empty results if a sibling dataset list test exi
 
 **Files You'll Likely Touch:**
 - `web/app/components/datasets/list/index.tsx` - search behavior and helper display.
-- `web/i18n/en-US/dataset.ts` - helper text.
+- `web/i18n/en-US/dataset.json` - helper text.
 
 **Relevant Existing Patterns:**
 - `web/app/components/datasets/list/index.tsx:35-52`
@@ -169,9 +169,9 @@ Use Vitest/RTL if a nearby test exists. Otherwise manually test debounce with sh
 - [ ] No extra network request is added per card.
 
 **Files You'll Likely Touch:**
-- `web/app/components/datasets/list/dataset-card.tsx` - display indicator.
+- `web/app/components/datasets/list/dataset-card/index.tsx` - display indicator.
 - `web/models/datasets.ts` - ensure type includes API flag if missing.
-- `web/i18n/en-US/dataset.ts` - label text.
+- `web/i18n/en-US/dataset.json` - label text.
 
 **Relevant Existing Patterns:**
 - `api/models/dataset.py:166-212`
@@ -332,7 +332,7 @@ Backend unit test or focused controller/service test for filter behavior. Fronte
 **Files You'll Likely Touch:**
 - `web/app/components/workflow-app/hooks/use-workflow-run.ts` - validation branch.
 - `web/app/components/workflow-app/hooks/use-workflow-run-utils.ts` - validation messages if needed.
-- `web/i18n/en-US/workflow.ts` or related namespace - localized feedback.
+- `web/i18n/en-US/workflow.json` or related namespace - localized feedback.
 - `web/app/components/workflow-app/hooks/__tests__/use-workflow-run.spec.ts` - tests.
 
 **Relevant Existing Patterns:**

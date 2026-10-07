@@ -6,7 +6,7 @@ All commands **inferred** from `Makefile`, root `package.json`, and `AGENTS.md` 
 
 | Task | Command | Source |
 | --- | --- | --- |
-| Full dev setup (middleware + envs + deps + migrate) | `make dev-setup` | Makefile |
+| Full dev setup (middleware + envs + deps + migrate) | `make dev-setup` (in this filtered study copy, first restore `docker/envs/middleware.env.example`, `api/.env.example` and `web/.env.example` from upstream; they were not exported) | Makefile |
 | Middleware only | `cd docker && docker compose -f docker-compose.middleware.yaml --env-file middleware.env -p dify-middlewares-dev up -d` | Makefile `prepare-docker` |
 | Backend deps | `cd api && uv sync --dev` | Makefile `prepare-api` |
 | Frontend deps | `pnpm install` (repo root) | Makefile `prepare-web` |

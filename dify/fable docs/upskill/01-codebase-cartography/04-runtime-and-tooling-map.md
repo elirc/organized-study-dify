@@ -47,7 +47,7 @@ Boundary rules worth internalizing:
 
 ## Environment variables
 
-- Backend: **never read `os.environ` directly** — everything flows through `configs.dify_config` (Pydantic settings; rule in `api/AGENTS.md`). Templates: `api/.env.example`, `docker/envs/middleware.env.example`. Examples used in code you've read: `PUBSUB_REDIS_CHANNEL_TYPE`, `APP_MAX_ACTIVE_REQUESTS`, `WORKFLOW_CALL_MAX_DEPTH`, `GRAPH_ENGINE_MIN_WORKERS`, `BATCH_UPLOAD_LIMIT`, `SECRET_KEY` (signs every JWT — `libs/passport.py`).
+- Backend: **never read `os.environ` directly** — everything flows through `configs.dify_config` (Pydantic settings; rule in `api/AGENTS.md`). Templates: `api/.env.example`, `docker/envs/middleware.env.example` (neither file is in this filtered study export; see `09-reference/verification-log.md`). Examples used in code you've read: `PUBSUB_REDIS_CHANNEL_TYPE`, `APP_MAX_ACTIVE_REQUESTS`, `WORKFLOW_CALL_MAX_DEPTH`, `GRAPH_ENGINE_MIN_WORKERS`, `BATCH_UPLOAD_LIMIT`, `SECRET_KEY` (signs every JWT — `libs/passport.py`).
 - Frontend: typed env via `@t3-oss/env-nextjs` (`web/env.ts`); public config constants in `web/config/`.
 
 Interview angle: "How do you keep config out of code?" — mid-level answer: centralized typed settings object (`dify_config` / `env.ts`), example of a fail-fast validation, and the secret-handling rule (SECRET_KEY signs auth tokens, so rotation invalidates all sessions — a real operational tradeoff).

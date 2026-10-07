@@ -19,6 +19,7 @@ Likely local setup:
    - `api/.env.example` to `api/.env`
    - `web/.env.example` to `web/.env.local`
    - `docker/envs/middleware.env.example` to `docker/middleware.env`
+   - *Filtered-export note:* this study copy does not include any of these three templates (see repo-root `SECURITY_FILTERED_FILES.md`). Fetch them from upstream `langgenius/dify` before you run steps 3-4.
 4. Start middleware with `cd docker && docker compose -f docker-compose.middleware.yaml --env-file middleware.env -p dify-middlewares-dev up -d`.
 5. Install frontend dependencies with `pnpm install`.
 6. Sync backend dependencies with `uv sync --project api --dev`.
